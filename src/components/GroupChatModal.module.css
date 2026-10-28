@@ -1,0 +1,225 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.profilePic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.userEmail {
+  font-size: 24px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.profileName {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.Emailheader {
+  align-self: flex-start;
+  font-size: 28px;
+}
+
+.inputField {
+  padding: 10px 15px;
+  outline: none;
+  background-color: bisque;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Base button styles */
+.BtnProfile {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff; /* Primary blue */
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none; /* Remove default outline */
+  margin-top: 10px;
+  margin-left: 242px;
+}
+
+/* Hover effect */
+.BtnProfile:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+}
+
+/* Focus state */
+.BtnProfile:focus {
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Blue shadow */
+}
+
+/* Active state */
+.BtnProfile:active {
+  background-color: #004085; /* Even darker shade */
+  box-shadow: none; /* Remove shadow on click */
+}
+
+/* Rendering searched users */
+
+.userList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.userItem:hover {
+  background-color: aqua;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+.userEmail {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Selected user styles */
+
+.userItemContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.userSelectItem {
+  background-color: #7027f7;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  gap: 5px;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px 6px;
+}
+
+.userBtn {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #7027f7;
+  border-radius: 4px;
+  cursor: pointer;
+
+  text-decoration: none;
+
+  outline: none; /* Remove default outline */
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* margin-right: 10px; */
+}
+
+.createbox {
+  position: relative;
+}
+
+.spinnerMessage {
+  right: 6px;
+  top: 4px;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    background: white;
+    /* background-color: #97f1d6; */
+    padding: 12px;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .BtnProfile {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    width: 103px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff; /* Primary blue */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none; /* Remove default outline */
+    margin-top: 10px;
+    margin-left: 210px;
+  }
+}

@@ -1,0 +1,199 @@
+/*
+.modalDrawer {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 335px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.open {
+  left: calc(100% - 1350px); // Move drawer to be visible 
+}
+
+.modalContent {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-weight: 600;
+}
+
+.GoBtn {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  background-color: aquamarine;
+  border-radius: 5px;
+  margin-left: 7px;
+}
+
+.closeBtn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.searchInput {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.userList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.userItem:hover {
+  background-color: aqua;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+.userEmail {
+  font-size: 14px;
+  color: #6c757d;
+}
+*/
+
+.modalDrawer {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hidden by default */
+  width: 335px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+/* Show drawer when open */
+.open {
+  left: 0;
+}
+
+/* Modal inner content */
+.modalContent {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-weight: 600;
+}
+
+/* Close and Go buttons */
+.closeBtn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.GoBtn {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  background-color: aquamarine;
+  border-radius: 5px;
+  margin-left: 7px;
+}
+
+/* Search input */
+.searchInput {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+/* User list */
+.userList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.userItem:hover {
+  background-color: aqua;
+}
+
+/* User avatar and text */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+.userEmail {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Make drawer full screen on small devices */
+@media (max-width: 768px) {
+  .modalDrawer {
+    width: 100%;
+  }
+}

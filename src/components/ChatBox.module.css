@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #19d4da;
+  border-radius: 8px;
+  padding: 16px 12px;
+}
+
+.BlankContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #19d4da;
+  border-radius: 8px;
+  padding: 16px 12px;
+}
+
+.BlankContainer p {
+  font-size: 26px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.eyeIcon {
+  font-size: 20px;
+}
+
+.chatArea {
+  flex-grow: 1;
+  position: relative;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin-top: 16px;
+  padding: 16px 15px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.inputContainerF {
+  position: relative;
+}
+.inputField {
+  padding: 10px 15px;
+  margin-top: 12px;
+  outline: none;
+  background-color: bisque;
+  width: 97%;
+  border-radius: 8px;
+}
+
+.eyeIcon {
+  font-size: 20px;
+  color: #484b4b;
+}
+
+/* Display messages */
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.UploadBtn {
+  position: absolute;
+  right: 40px;
+  top: 18px;
+  font-size: 20px;
+}
+
+.spinnerMessage {
+  right: 40px;
+  top: 18px;
+}
+
+.sendBtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px 8px;
+    border-radius: 0;
+  }
+
+  .BlankContainer {
+    padding: 12px 8px;
+    border-radius: 0;
+  }
+
+  .BlankContainer p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .header {
+    font-size: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .chatArea {
+    padding: 12px 10px;
+    margin-top: 12px;
+    border-radius: 6px;
+  }
+
+  .inputField {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .UploadBtn {
+    right: 20px;
+    top: 16px;
+    font-size: 18px;
+  }
+
+  .spinnerMessage {
+    right: 20px;
+    top: 16px;
+  }
+
+  .eyeIcon {
+    font-size: 18px;
+  }
+
+  .sendBtn {
+    display: inline-block;
+    border: none;
+    position: absolute;
+    right: 47px;
+    top: 17px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,72 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  /* background: white; */
+  background-color: #97f1d6;
+  padding: 28px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.imageBtn {
+  padding: 5px 10px;
+  background-color: bisque;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  color: black;
+  border-radius: 4px;
+}
+
+.innerModal {
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -13px;
+  right: -8px;
+}
+
+.imageBOX {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.imageBOX label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.spinnerMessage {
+  right: 20px;
+  top: 16px;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    background: white;
+    /* background-color: #97f1d6; */
+    padding: 12px;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+}

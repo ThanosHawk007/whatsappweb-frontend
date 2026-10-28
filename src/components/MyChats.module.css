@@ -1,0 +1,196 @@
+.myChatsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  background-color: #22e4eb;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userItem {
+  background-color: #f7f8f8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 4px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.userItem:hover {
+  background-color: aqua;
+}
+
+.isOnline {
+  margin-left: 5px;
+  color: green;
+}
+
+.isOffline {
+  margin-left: 5px;
+  color: red;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 20px;
+}
+
+.newGroupButton {
+  background-color: #fff;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.newGroupButton:hover {
+  background-color: #e9ecef;
+}
+
+.selecChat {
+  background-color: aquamarine !important;
+}
+
+.chatList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.chatItem {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 8px 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+
+.chatItem span {
+  font-weight: bold;
+}
+
+.chatItem p {
+  margin: 5px 0 0;
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.chatItem:hover {
+  background-color: #e9ecef;
+}
+
+.deleteBtn {
+  color: #8d8d8c;
+  position: absolute;
+  top: 25px;
+  right: 37px;
+}
+
+
+.unseenCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 24px;
+  height: 24px;
+  padding: 0 7px;
+
+  /* margin-left: auto; */
+  position:absolute;
+  bottom: 77px;
+  right: 13px;
+
+  background-color: #16a34a;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+
+  border-radius: 50px;
+  flex-shrink: 0;
+}
+
+
+@media (max-width: 922px) {
+  .myChatsContainer {
+    width: 100%;
+    border-radius: 0;
+    padding: 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .newGroupButton {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  .chatItem {
+    width: 60%;
+    background-color: #b3f3f0;
+    border-radius: 5px;
+    padding: 9px 9px;
+    height: 85px;
+    position: relative;
+  }
+
+  .userItem {
+    height: 100%;
+    background-color: #ddf8f0;
+    border-radius: 6px;
+    padding: 3px 5px;
+  }
+
+  .chatItem p {
+    font-size: 0.85em;
+    position: absolute;
+    top: 48px;
+    left: 72px;
+  }
+
+  .deleteBtn {
+    color: #8d8d8c;
+    position: absolute;
+    top: 50px;
+    right: 35px;
+  }
+  .unseenCount {
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+    bottom: 35px;
+    right: 30px;
+  }
+}

@@ -1,0 +1,62 @@
+.ProfileCont {
+  position: absolute;
+  top: 70px;
+  right: 15px;
+  width: 200px;
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Base button styles */
+.BtnProfile {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff; /* Primary blue */
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none; /* Remove default outline */
+}
+
+/* Hover effect */
+.BtnProfile:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+}
+
+/* Focus state */
+.BtnProfile:focus {
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Blue shadow */
+}
+
+/* Active state */
+.BtnProfile:active {
+  background-color: #004085; /* Even darker shade */
+  box-shadow: none; /* Remove shadow on click */
+}
+
+@media (max-width: 768px) {
+  .ProfileCont {
+    position: absolute;
+    top: 137px;
+    right: 10px;
+    width: 200px;
+    padding: 15px 20px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+    border-radius: 10px;
+  }
+}

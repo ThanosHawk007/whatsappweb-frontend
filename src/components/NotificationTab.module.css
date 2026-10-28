@@ -1,0 +1,40 @@
+.notificationContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  gap: 4px;
+  position: absolute;
+  right: 8px;
+  width: 160px;
+  z-index: 2;
+  top: 26px;
+  background-color: bisque;
+  border-radius: 5px;
+}
+
+.notifyItem {
+  cursor: pointer;
+  list-style: none;
+  background-color: bisque;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #e4d8c9;
+}
+
+.notifyItem:hover {
+  background-color: #f8d3a5;
+}
+
+@media (max-width: 768px) {
+  .notificationContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    gap: 4px;
+    position: absolute;
+    left: 12px;
+    top: 25px;
+    background-color: bisque;
+    border-radius: 5px;
+    width: 160px;
+  }
+}
