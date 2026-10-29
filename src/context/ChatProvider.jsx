@@ -13,7 +13,8 @@ import Axios from "../components/Auth/axiosConfig";
 
 // import SockJS from "sockjs-client";
 
-const ENDPOINT = "http://localhost:8080/ws"; // Spring Boot endpoint
+// const ENDPOINT = "http://localhost:8080/ws"; // Spring Boot endpoint
+const ENDPOINT = "https://whatsapp-server-0qfp.onrender.com/ws";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 // const ENDPOINT = "wss://scm20.space/ws";
