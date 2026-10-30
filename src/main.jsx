@@ -20,20 +20,30 @@ window.addEventListener("beforeunload", () => {
   console.log("Navigating away from:", window.location.href);
 });
 
-const originalPushState = history.pushState;
+console.log("MAIN.JSX LOADED");
+console.log("Current URL:", window.location.href);
 
-history.pushState = function (...args) {
-  console.trace("history.pushState called:", args);
-  return originalPushState.apply(this, args);
+// Detect full-page navigation attempts
+const originalAssign = window.location.assign.bind(window.location);
+const originalReplace = window.location.replace.bind(window.location);
+
+window.location.assign = function (url) {
+  console.trace("window.location.assign called:", url);
+  return originalAssign(url);
 };
 
-const originalReplaceState = history.replaceState;
+window.location.replace = function (url) {
+  console.trace("window.location.replace called:", url);
+  return originalReplace(url);
+};
 
-history.replaceState = function (...args) {
-  console.log("replaceState URL argument:", args[2]);
-  console.trace("replaceState caller");
+// Detect history API navigation
+const originalPushState = history.pushState.bind(history);
 
-  return originalReplaceState.apply(this, args);
+history.pushState = function (...args) {
+  console.log("pushState URL argument:", args[2]);
+  console.trace("pushState caller");
+  return originalPushState(...args);
 };
 
 createRoot(document.getElementById("root")).render(
