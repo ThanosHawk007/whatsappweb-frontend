@@ -45,7 +45,7 @@ function App() {
               </ChatProvider>
             }
           >
-            <Route path="/" index element={<HomePage />} />
+            <Route index element={<HomePage />} />
             {/* <Route path="/chats" element={<ChatPage />} /> */}
             <Route
               path="/chats"

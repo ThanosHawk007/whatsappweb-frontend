@@ -11,10 +11,15 @@ function OAuthSuccess() {
   const location = useLocation();
   const toast = useToast();
 
+  console.log("OAuthSuccess component rendered");
+  console.log("OAuthSuccess current URL:", window.location.href);
+
   const { handleWebSocketConnection, setUser, setJwtToken } = useChatContext();
 
   useEffect(() => {
     async function fetchUser() {
+      console.log("OAuthSuccess useEffect executed");
+
       try {
         const res = await axios.get(`${API_BASE_URL}/api/user/me`, {
           withCredentials: true,
@@ -22,8 +27,8 @@ function OAuthSuccess() {
 
         const user = res.data;
 
-        // console.log(`OAuthSuccess user: ${user}`);
-        // console.log(typeof user?.pic);
+        console.log("/api/user/me response status:", res.status);
+        console.log("/api/user/me response data:", res.data);
 
         localStorage.setItem("userInfo", JSON.stringify(user));
 
@@ -36,9 +41,14 @@ function OAuthSuccess() {
           duration: 4000,
         });
 
+        console.log("Navigating to /chats");
+
         navigate("/chats");
       } catch (error) {
         // console.error("Failed to fetch user:", error);
+        console.error("OAuthSuccess fetchUser failed:", error);
+        console.error("Error response status:", error.response?.status);
+        console.error("Error response data:", error.response?.data);
         navigate("/");
       }
     }
@@ -46,7 +56,8 @@ function OAuthSuccess() {
     fetchUser();
   }, [location.search, navigate, toast, handleWebSocketConnection]);
 
-  return null;
+  // return null;
+  return <div>Completing Google login...</div>;
 }
 
 export default OAuthSuccess;
