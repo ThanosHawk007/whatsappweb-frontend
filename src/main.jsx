@@ -7,20 +7,6 @@ import App from "./App.jsx";
 import "./index.css";
 
 console.log("MAIN.JSX LOADED");
-
-console.log("Current URL:", window.location.href);
-
-window.addEventListener("beforeunload", () => {
-  console.log("PAGE IS NAVIGATING AWAY FROM:", window.location.href);
-});
-
-console.log("Initial URL:", window.location.href);
-
-window.addEventListener("beforeunload", () => {
-  console.log("Navigating away from:", window.location.href);
-});
-
-console.log("MAIN.JSX LOADED");
 console.log("Current URL:", window.location.href);
 
 // Detect full-page navigation attempts
