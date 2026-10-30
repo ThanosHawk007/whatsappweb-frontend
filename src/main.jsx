@@ -14,6 +14,26 @@ window.addEventListener("beforeunload", () => {
   console.log("PAGE IS NAVIGATING AWAY FROM:", window.location.href);
 });
 
+console.log("Initial URL:", window.location.href);
+
+window.addEventListener("beforeunload", () => {
+  console.log("Navigating away from:", window.location.href);
+});
+
+const originalPushState = history.pushState;
+
+history.pushState = function (...args) {
+  console.trace("history.pushState called:", args);
+  return originalPushState.apply(this, args);
+};
+
+const originalReplaceState = history.replaceState;
+
+history.replaceState = function (...args) {
+  console.trace("history.replaceState called:", args);
+  return originalReplaceState.apply(this, args);
+};
+
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
   <ChakraProvider>
