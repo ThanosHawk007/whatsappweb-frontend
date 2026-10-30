@@ -11,8 +11,8 @@ function OAuthSuccess() {
   const location = useLocation();
   const toast = useToast();
 
-  console.log("OAuthSuccess component rendered");
-  console.log("OAuthSuccess current URL:", window.location.href);
+  // console.log("OAuthSuccess component rendered");
+  // console.log("OAuthSuccess current URL:", window.location.href);
 
   const { handleWebSocketConnection, setUser, setJwtToken } = useChatContext();
 
@@ -27,8 +27,8 @@ function OAuthSuccess() {
 
         const user = res.data;
 
-        console.log("/api/user/me response status:", res.status);
-        console.log("/api/user/me response data:", res.data);
+        // console.log("/api/user/me response status:", res.status);
+        // console.log("/api/user/me response data:", res.data);
 
         localStorage.setItem("userInfo", JSON.stringify(user));
 
@@ -41,7 +41,7 @@ function OAuthSuccess() {
           duration: 4000,
         });
 
-        console.log("Navigating to /chats");
+        // console.log("Navigating to /chats");
 
         navigate("/chats");
       } catch (error) {
