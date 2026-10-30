@@ -9,19 +9,9 @@ import "./index.css";
 console.log("MAIN.JSX LOADED");
 console.log("Current URL:", window.location.href);
 
-// Detect full-page navigation attempts
-const originalAssign = window.location.assign.bind(window.location);
-const originalReplace = window.location.replace.bind(window.location);
-
-window.location.assign = function (url) {
-  console.trace("window.location.assign called:", url);
-  return originalAssign(url);
-};
-
-window.location.replace = function (url) {
-  console.trace("window.location.replace called:", url);
-  return originalReplace(url);
-};
+console.log("MAIN.JSX LOADED");
+console.log("Current URL:", window.location.href);
+console.log("Initial URL:", window.location.href);
 
 // Detect history API navigation
 const originalPushState = history.pushState.bind(history);
@@ -30,6 +20,14 @@ history.pushState = function (...args) {
   console.log("pushState URL argument:", args[2]);
   console.trace("pushState caller");
   return originalPushState(...args);
+};
+
+const originalReplaceState = history.replaceState.bind(history);
+
+history.replaceState = function (...args) {
+  console.log("replaceState URL argument:", args[2]);
+  console.trace("replaceState caller");
+  return originalReplaceState(...args);
 };
 
 createRoot(document.getElementById("root")).render(
