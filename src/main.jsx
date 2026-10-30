@@ -30,7 +30,9 @@ history.pushState = function (...args) {
 const originalReplaceState = history.replaceState;
 
 history.replaceState = function (...args) {
-  console.trace("history.replaceState called:", args);
+  console.log("replaceState URL argument:", args[2]);
+  console.trace("replaceState caller");
+
   return originalReplaceState.apply(this, args);
 };
 
